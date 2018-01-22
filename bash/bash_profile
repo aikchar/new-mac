@@ -29,3 +29,12 @@ if [ "$TERM" = xterm-256color ]; then
 else
     PS1='\t \w$(__git_ps1 " git->(%s)") $ '
 fi
+
+##
+# Your previous /Users/CHANGEME/.bash_profile file was backed up as /Users/CHANGEME/.bash_profile.macports-saved_2018-01-22_at_15:48:14
+##
+
+# MacPorts Installer addition on 2018-01-22_at_15:48:14: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
