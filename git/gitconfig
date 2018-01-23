@@ -2,5 +2,8 @@
 	name = Hamza Sheikh
 	email = code@codeghar.com
 
+[core]
+	editor = code --wait
+
 [commit]
 	template = ~/.gitmessage
