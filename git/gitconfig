@@ -1,3 +1,6 @@
 [user]
 	name = Hamza Sheikh
 	email = code@codeghar.com
+
+[commit]
+	template = ~/.gitmessage
