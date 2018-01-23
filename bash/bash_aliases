@@ -1,0 +1,1 @@
+alias port-update='sudo /opt/local/bin/port -v selfupdate; sudo /opt/local/bin/port upgrade outdated'
