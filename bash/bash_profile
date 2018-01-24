@@ -43,6 +43,6 @@ GOROOT=/opt/local/lib/go
 export GOPATH
 GOPATH=$HOME/go
 
-PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
+PATH="$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/Library/Python/3.6/bin"
 
 . ~/.bash_aliases
