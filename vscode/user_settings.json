@@ -12,5 +12,14 @@
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
     "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true
+    "files.trimFinalNewlines": true,
+    "[python]": {
+        "editor.wordWrap": "off"
+    },
+    "[shellscript]": {
+        "editor.wordWrap": "off"
+    },
+    "[go]": {
+        "editor.wordWrap": "off"
+    }
 }
