@@ -1,0 +1,8 @@
+git                            @2.16.0         devel/git
+go                             @1.9.3          lang/go
+go-tools                       @c21bc47f893ee73c18dd2119bb8ff9a2b492c4c6 devel/go-tools
+py36-pip                       @9.0.1          python/py-pip
+py36-wheel                     @0.30.0         python/py-wheel
+python36                       @3.6.4          lang/python36
+ssh-copy-id                    @7.6p1          net/openssh
+tree                           @1.7.0          sysutils/tree

@@ -38,4 +38,11 @@ fi
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+export GOROOT
+GOROOT=/opt/local/lib/go
+export GOPATH
+GOPATH=$HOME/go
+
+PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
+
 . ~/.bash_aliases
