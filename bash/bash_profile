@@ -45,4 +45,6 @@ GOPATH=$HOME/go
 
 PATH="$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/Library/Python/3.6/bin"
 
-. ~/.bash_aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
