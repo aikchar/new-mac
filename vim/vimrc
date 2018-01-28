@@ -1,0 +1,7 @@
+" http://xmodulo.com/open-large-text-file-linux.html
+" http://www.vim.org/scripts/script.php?script_id=1506
+let g:LargeFile=20
+set nowrap
+set number
+set cursorline
+
