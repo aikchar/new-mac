@@ -695,9 +695,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>723 655 445 103 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>448 452 796 473 0 0 1680 1027 </string>
+	<string>448 453 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>50 0 1630 1027 0 0 1680 1027 </string>
+	<string>47 0 1633 1027 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1270,7 +1270,7 @@
 			<key>Normal Font</key>
 			<string>Hack-Regular 15</string>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
@@ -1345,6 +1345,8 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>2B075B9C-0B9D-407E-B1CC-7704BF64DDB2</string>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>538349643.15674901</real>
 	<key>OpenArrangementAtStartup</key>
@@ -1397,7 +1399,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-01-22T22:20:23Z</date>
+	<date>2018-01-29T18:16:44Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1416,6 +1418,8 @@
 	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>iTerm Version</key>
 	<string>3.1.5</string>
 </dict>

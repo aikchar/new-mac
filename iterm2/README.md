@@ -1,3 +1,12 @@
+Disable tracking of local changes to these files by git (https://stackoverflow.com/a/26854768):
+
+        $ git update-index --assume-unchanged ./com.googlecode.iterm2.plist
+
+To enable tracking local changes when you really need to,
+
+        $ git update-index --no-assume-unchanged ./com.googlecode.iterm2.plist
+
+
 # iTerm Themes
 
 http://iterm2colorschemes.com/
@@ -39,5 +48,3 @@ https://gist.github.com/phette23/5270658
 # git Prompt
 
 https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
-
-
