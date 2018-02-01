@@ -48,3 +48,8 @@ PATH="$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/Library/Python/3.6/bin"
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR
+SDKMAN_DIR="${HOME}/.sdkman"
+[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
