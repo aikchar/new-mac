@@ -40,5 +40,9 @@
     },
     "[go]": {
         "editor.wordWrap": "off"
+    },
+    "[java]": {
+        "editor.rulers": [79, 129],
+        "editor.wordWrap": "off"
     }
 }
