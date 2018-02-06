@@ -19,3 +19,9 @@ HISTFILESIZE=20000
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+# End copy from Ubuntu 17.10
+
+# Install direnv (https://github.com/direnv/direnv)
+# Enable it
+eval "$(direnv hook bash)"
