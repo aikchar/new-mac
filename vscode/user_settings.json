@@ -44,5 +44,16 @@
     "[java]": {
         "editor.rulers": [79, 129],
         "editor.wordWrap": "off"
+    },
+    "files.associations": {
+        "*.sls": "jinja",
+        ".bashrc": "shellscript",
+        "bashrc": "shellscript",
+        ".bash_profile": "shellscript",
+        "bash_profile": "shellscript",
+        ".bash_aliases": "shellscript",
+        "bash_aliases": "shellscript",
+        ".editorconfig": "ini",
+        "editorconfig": "ini"
     }
 }
