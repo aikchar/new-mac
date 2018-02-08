@@ -25,3 +25,6 @@ shopt -s checkwinsize
 # Install direnv (https://github.com/direnv/direnv)
 # Enable it
 eval "$(direnv hook bash)"
+
+alias port-update='sudo /opt/local/bin/port -v selfupdate; sudo /opt/local/bin/port upgrade outdated'
+alias port-clean='sudo port uninstall inactive; port echo leaves; sudo port uninstall leaves;'
