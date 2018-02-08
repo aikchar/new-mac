@@ -24,7 +24,7 @@ GIT_PS1_HIDE_IF_PWD_IGNORED=true
 . ~/.git-prompt.sh
 
 export PS1
-if [ "$TERM" = xterm-256color ]; then
+if [ "${TERM}" = xterm-256color ]; then
     PS1='\[\033[01;32m\]\w$(__git_ps1 " git->(%s)") $\[\e[0m\] '
 else
     PS1='\t \w$(__git_ps1 " git->(%s)") $ '
@@ -45,18 +45,16 @@ GOPATH=$HOME/go
 
 PATH="$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/Library/Python/3.6/bin"
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+SDKMAN_DIR="${HOME}/.sdkman"
+if [ -d "${SDKMAN_DIR}" ]; then
+    export SDKMAN_DIR
+    test -s "${SDKMAN_DIR}/bin/sdkman-init.sh" && . "${SDKMAN_DIR}/bin/sdkman-init.sh"
 fi
 
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR
-SDKMAN_DIR="${HOME}/.sdkman"
-[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
 
 export CDPATH
 CDPATH=".:${HOME}/repos:${HOME}"

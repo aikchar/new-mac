@@ -1,5 +1,6 @@
 {
     "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": true,
     "editor.autoIndent": true,
     "editor.cursorBlinking": "blink",
     "editor.cursorStyle": "line",
@@ -16,6 +17,17 @@
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 119,
     "editor.wrappingIndent": "indent",
+    "files.associations": {
+        "*.sls": "jinja",
+        ".bashrc": "shellscript",
+        "bashrc": "shellscript",
+        ".bash_profile": "shellscript",
+        "bash_profile": "shellscript",
+        ".bash_aliases": "shellscript",
+        "bash_aliases": "shellscript",
+        ".editorconfig": "ini",
+        "editorconfig": "ini"
+    },
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 7000,
     "files.hotExit": "onExit",
@@ -23,6 +35,7 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "git.enabled": true,
+    "git.path": "/opt/local/bin/git",
     "python.linting.lintOnSave": true,
     "python.linting.pylintEnabled": true,
     "workbench.colorTheme": "Visual Studio Dark",
@@ -32,6 +45,7 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.external.osxExec": "iTerm.app",
+    "window.zoomLevel": 0,
     "[python]": {
         "editor.wordWrap": "off"
     },
@@ -44,16 +58,5 @@
     "[java]": {
         "editor.rulers": [79, 129],
         "editor.wordWrap": "off"
-    },
-    "files.associations": {
-        "*.sls": "jinja",
-        ".bashrc": "shellscript",
-        "bashrc": "shellscript",
-        ".bash_profile": "shellscript",
-        "bash_profile": "shellscript",
-        ".bash_aliases": "shellscript",
-        "bash_aliases": "shellscript",
-        ".editorconfig": "ini",
-        "editorconfig": "ini"
     }
 }
