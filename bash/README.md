@@ -1,9 +1,14 @@
-Link bash_profile in this directory to ~/.bash_profile.
+Created a workflow similar to https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html.
 
-Idea is to source this file from a git repo.
+Read *Makefile* to figure out what's going on behind the scenes.
 
-        $ ln -s ~/config/bash/bash_profile ~/.bash_profile
+Make backups of these files,
 
-Link bashrc in this directory to ~/.bashrc.
+* ~/.bash_logout
+* ~/.bash_profile
+* ~/.bashrc
+* ~/.profile
 
-        $ ln -s ~/config/bash/bashrc ~/.bashrc
+Then run,
+
+        $ make init

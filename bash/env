@@ -1,0 +1,10 @@
+# Set $ENV so the startup scripts run correctly
+# * When bash is your login shell, and
+# * "sh" is started as a non-login interactive shell
+export ENV
+ENV=~/.shells/bash/interactive
+
+# We also need to set BASH_ENV, which is run for *non-interactive* shells.
+# (unlike $ENV, which is for interactive shells)
+export BASH_ENV
+BASH_ENV=~/.shells/bash/env

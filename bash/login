@@ -1,0 +1,49 @@
+# Set environment variables
+
+export CLICOLOR
+CLICOLOR=1
+
+if [ $ITERM_SESSION_ID ]; then
+  export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
+fi
+
+export GIT_PS1_SHOWUPSTREAM
+GIT_PS1_SHOWUPSTREAM='verbose name'
+export GIT_PS1_SHOWDIRTYSTATE
+GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWSTASHSTATE
+GIT_PS1_SHOWSTASHSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES
+GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWUPSTREAM
+GIT_PS1_SHOWUPSTREAM=auto
+export GIT_PS1_DESCRIBE_STYLE
+GIT_PS1_DESCRIBE_STYLE=default
+export GIT_PS1_SHOWCOLORHINTS
+GIT_PS1_SHOWCOLORHINTS=true
+export GIT_PS1_HIDE_IF_PWD_IGNORED
+GIT_PS1_HIDE_IF_PWD_IGNORED=true
+
+export PS1
+if [ "${TERM}" = xterm-256color ]; then
+    PS1='\[\033[01;32m\]\w$(__git_ps1 " git->(%s)") $\[\e[0m\] '
+else
+    PS1='\t \w$(__git_ps1 " git->(%s)") $ '
+fi
+
+export GOROOT
+GOROOT=/opt/local/lib/go
+export GOPATH
+GOPATH=$HOME/go
+
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/Library/Python/3.6/bin"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+SDKMAN_DIR="${HOME}/.sdkman"
+if [ -d "${SDKMAN_DIR}" ]; then
+    export SDKMAN_DIR
+    test -s "${SDKMAN_DIR}/bin/sdkman-init.sh" && . "${SDKMAN_DIR}/bin/sdkman-init.sh"
+fi
+
+export CDPATH
+CDPATH=".:${HOME}/repos:${HOME}"
