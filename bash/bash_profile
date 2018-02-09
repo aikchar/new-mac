@@ -19,7 +19,3 @@ BASH_ENV=
 if [ "$PS1" ]; then
     . ~/.shells/bash/interactive
 fi
-
-if [ -f ~/.git-prompt.sh ]; then
-    . ~/.git-prompt.sh
-fi

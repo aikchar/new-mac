@@ -33,6 +33,10 @@ shopt -s checkwinsize
 
 # End copy from Ubuntu 17.10
 
+if [ -f ~/.git-prompt.sh ]; then
+    . ~/.git-prompt.sh
+fi
+
 # Install direnv (https://github.com/direnv/direnv)
 # Enable it
 eval "$(direnv hook bash)"
