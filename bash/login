@@ -31,12 +31,31 @@ else
     PS1='\t \w$(__git_ps1 " git->(%s)") $ '
 fi
 
-export GOROOT
-GOROOT=/opt/local/lib/go
 export GOPATH
 GOPATH=$HOME/go
+export PATH
+PATH="$PATH:$GOPATH/bin"
+# Assumes MacPorts is being used on macOS
+if [ "$(uname -s)" = 'Darwin' ]; then
+    export GOROOT
+    GOROOT=/opt/local/lib/go
 
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/Library/Python/3.6/bin"
+    PATH="/opt/local/bin:/opt/local/sbin:$PATH:$GOROOT/bin"
+fi
+
+if [ "$(uname -s)" = 'Darwin' ]; then
+    PATH="$PATH:$HOME/Library/Python/3.7/bin:$HOME/Library/Python/3.6/bin:$HOME/Library/Python/2.7/bin"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 SDKMAN_DIR="${HOME}/.sdkman"
