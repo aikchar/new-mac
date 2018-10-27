@@ -35,3 +35,7 @@ indent_size = 2
 
 [{Makefile,gitconfig,.gitconfig}]
 indent_style = tab
+
+[*.properties]
+; end_of_line = crlf
+end_of_line = lf

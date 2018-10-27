@@ -26,28 +26,37 @@
         ".bash_aliases": "shellscript",
         "bash_aliases": "shellscript",
         ".editorconfig": "ini",
-        "editorconfig": "ini"
+        "editorconfig": "ini",
+        ".envrc": "shellscript"
     },
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 7000,
+    // "files.eol": "\r\n",
+    "files.eol": "\n",
     "files.hotExit": "onExit",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "git.enabled": true,
     "git.path": "/opt/local/bin/git",
+    "go.formatTool": "gofmt", // https://github.com/Microsoft/vscode-go/issues/624#issuecomment-261696096
     "python.linting.lintOnSave": true,
     "python.linting.pylintEnabled": true,
-    "workbench.colorTheme": "Visual Studio Dark",
-    "workbench.editor.closeOnFileDelete": false,
-    "workbench.iconTheme": "material-theme-icons",
     "shellcheck.enable": true,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.external.osxExec": "iTerm.app",
     "window.zoomLevel": 0,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.editor.closeOnFileDelete": false,
+    "workbench.iconTheme": "material-icon-theme",
     "[python]": {
-        "editor.wordWrap": "off"
+        "editor.wordWrap": "off",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": false
+        }
     },
     "[shellscript]": {
         "editor.wordWrap": "off"
@@ -58,5 +67,8 @@
     "[java]": {
         "editor.rulers": [79, 129],
         "editor.wordWrap": "off"
+    },
+    "[terraform]": {
+        "editor.formatOnSave": true
     }
 }
