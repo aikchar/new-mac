@@ -1,12 +1,16 @@
 EditorConfig.EditorConfig
-Equinusocio.vsc-material-theme
+PKief.material-icon-theme
 Pendrica.chef
 PeterJausovec.vscode-docker
 evilz.vscode-reveal
+joslarson.black-vscode
+korekontrol.saltstack
 lextudio.restructuredtext
-lukehoban.Go
 marcostazi.VS-code-vagrantfile
+mauve.terraform
 ms-python.python
+ms-vscode.Go
+ms-vsliveshare.vsliveshare
 naco-siren.gradle-language
 pgourlain.erlang
 rebornix.Ruby
@@ -16,4 +20,6 @@ secanis.jenkinsfile-support
 timonwong.shellcheck
 vscjava.vscode-java-debug
 vscjava.vscode-java-pack
+vscjava.vscode-java-test
+vscjava.vscode-maven
 wholroyd.jinja
