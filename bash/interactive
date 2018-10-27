@@ -1,6 +1,11 @@
 # Create aliases here
-alias port-update='sudo /opt/local/bin/port -v selfupdate; sudo /opt/local/bin/port upgrade outdated'
-alias port-clean='sudo /opt/local/bin/port uninstall inactive; /opt/local/bin/port echo leaves; sudo /opt/local/bin/port uninstall leaves;'
+if [ "$(uname -s)" = 'Darwin' ]; then
+    alias port-update='sudo /opt/local/bin/port selfupdate; sudo /opt/local/bin/port upgrade outdated'
+    alias port-clean='sudo /opt/local/bin/port uninstall inactive; /opt/local/bin/port echo leaves; sudo /opt/local/bin/port uninstall leaves;'
+    alias rbt-new='rbt post --branch master --parent master --open'
+    alias rbt-update='rbt post --update --parent master --open'
+    alias git-sanity='git --no-pager log --oneline --graph --decorate -200'
+fi
 
 # In a terminal
 #if [ -t 0 ]; then
@@ -39,4 +44,16 @@ fi
 
 # Install direnv (https://github.com/direnv/direnv)
 # Enable it
-eval "$(direnv hook bash)"
+if which direnv 1>/dev/null; then
+    eval "$(direnv hook bash)"
+fi
+
+# PS1 doesn't get set properly in gnome-terminal without this block
+if [ "$(uname -s)" = 'Linux' ]; then
+    export PS1
+    if [ "${TERM}" = xterm-256color ]; then
+        PS1='\[\033[01;32m\]\w$(__git_ps1 " git->(%s)") $\[\e[0m\] '
+    else
+        PS1='\t \w$(__git_ps1 " git->(%s)") $ '
+    fi
+fi
