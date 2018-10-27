@@ -52,8 +52,8 @@ fi
 if [ "$(uname -s)" = 'Linux' ]; then
     export PS1
     if [ "${TERM}" = xterm-256color ]; then
-        PS1='\[\033[01;32m\]\w$(__git_ps1 " git->(%s)") $\[\e[0m\] '
+        PS1='\[\033[01;32m\]\w$(__git_ps1 " git->(%s)") \n$\[\e[0m\] '
     else
-        PS1='\t \w$(__git_ps1 " git->(%s)") $ '
+        PS1='\t \w$(__git_ps1 " git->(%s)") \n$ '
     fi
 fi
