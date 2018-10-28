@@ -6,7 +6,7 @@
     "editor.cursorStyle": "line",
     "editor.fontFamily": "Hack, Menlo, Ubuntu, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
-    "editor.fontSize": 15,
+    "editor.fontSize": 16,
     "editor.insertSpaces": true,
     "editor.minimap.enabled": true,
     "editor.renderControlCharacters": true,
@@ -40,6 +40,7 @@
     "git.enabled": true,
     "git.path": "/opt/local/bin/git",
     "go.formatTool": "gofmt", // https://github.com/Microsoft/vscode-go/issues/624#issuecomment-261696096
+    "python.formatting.provider": "black",
     "python.linting.lintOnSave": true,
     "python.linting.pylintEnabled": true,
     "shellcheck.enable": true,
@@ -51,6 +52,7 @@
     "workbench.editor.closeOnFileDelete": false,
     "workbench.iconTheme": "material-icon-theme",
     "[python]": {
+        "editor.formatOnSave": true,
         "editor.wordWrap": "off",
         "editor.quickSuggestions": {
             "other": true,
@@ -59,16 +61,29 @@
         }
     },
     "[shellscript]": {
+        "editor.rulers": [119],
         "editor.wordWrap": "off"
     },
     "[go]": {
+        "editor.formatOnSave": true,
         "editor.wordWrap": "off"
     },
     "[java]": {
-        "editor.rulers": [79, 129],
+        "editor.rulers": [79, 119],
         "editor.wordWrap": "off"
     },
     "[terraform]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.rulers": [119]
+    },
+    "[json]": {
+        "editor.rulers": [119],
+        "editor.tabSize": 4,
+        "editor.wordWrap": "off"
+    },
+    "[yaml]": {
+        "editor.rulers": [119],
+        "editor.tabSize": 4,
+        "editor.wordWrap": "off"
     }
 }

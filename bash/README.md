@@ -4,10 +4,10 @@ Read *Makefile* to figure out what's going on behind the scenes.
 
 Make backups of these files,
 
-* ~/.bash_logout
-* ~/.bash_profile
-* ~/.bashrc
-* ~/.profile
+- ~/.bash_logout
+- ~/.bash_profile
+- ~/.bashrc
+- ~/.profile
 
 Then run,
 

@@ -5,7 +5,7 @@ root = true
 [*]
 charset = utf-8
 end_of_line = lf
-max_line_length = 79
+max_line_length = 119
 trim_trailing_whitespace = true
 indent_style = space
 insert_final_newline = true
@@ -16,12 +16,12 @@ indent_style = tab
 max_line_length = 119
 
 [*.{md,rst}]
-max_line_length = 79
+max_line_length = 119
 
 [*.py]
 indent_style = space
 indent_size = 4
-max_line_length = 79
+max_line_length = 119
 
 [*.{json,yaml,yml}]
 indent_size = 4
@@ -31,7 +31,7 @@ max_line_length = 119
 
 [Vagrantfile]
 indent_style = space
-indent_size = 2
+indent_size = 4
 
 [{Makefile,gitconfig,.gitconfig}]
 indent_style = tab
