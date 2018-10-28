@@ -4,4 +4,3 @@ let g:LargeFile=20
 set nowrap
 set number
 set cursorline
-

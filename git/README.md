@@ -18,8 +18,8 @@ To enable tracking local changes when you really need to,
 
 Edit these files according to your requirements,
 
-- ~/.gitconfig
-- ~/.gitmessage
+- gitconfig
+- gitmessage
 
 Then run,
 
