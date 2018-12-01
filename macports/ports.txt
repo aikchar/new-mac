@@ -1,0 +1,18 @@
+# List all ports you want to install in the order they should be installed
+# The order is important so that MacPorts can keep track of which ports
+# were 'requested' to later use in ``port list requested``
+python37
+py37-pip
+python27
+py27-pip
+git
+ssh-copy-id
+direnv
+tree
+drill
+sshpass
+terraform
+jq
+gnupg2
+go
+shellcheck

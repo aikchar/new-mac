@@ -1,0 +1,13 @@
+.PHONY: warn
+warn:
+	@echo 'Run'
+	@echo '    make init'
+
+
+.PHONY: init
+init:
+	sudo port select --set python3 python37
+	python3 -m pip install --user -U pip
+	python3 -m pip install --user -U pipenv
+	python3 -m pip install --user -U black
+	python3 -m pip install --user -U ansible
