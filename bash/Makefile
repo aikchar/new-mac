@@ -1,5 +1,6 @@
 SHELLSDIR := ~/.shells
 BASHDIR := $(SHELLSDIR)/bash
+NOW := $(shell date -u +"%Y%m%d%H%M%S")
 
 .PHONY: warn
 warn:
@@ -13,14 +14,14 @@ warn:
 
 .PHONY: init
 init: | $(BASHDIR)
-	cp env $(BASHDIR)/env
-	cp interactive $(BASHDIR)/interactive
-	cp login $(BASHDIR)/login
-	cp logout $(BASHDIR)/logout
-	cp bash_logout ~/.bash_logout
-	cp bash_profile ~/.bash_profile
-	cp bashrc ~/.bashrc
-	cp profile ~/.profile
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress env $(BASHDIR)/env
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress interactive $(BASHDIR)/interactive
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress login $(BASHDIR)/login
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress logout $(BASHDIR)/logout
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress bash_logout ~/.bash_logout
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress bash_profile ~/.bash_profile
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress bashrc ~/.bashrc
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress profile ~/.profile
 
 $(SHELLSDIR):
 	mkdir $(SHELLSDIR)

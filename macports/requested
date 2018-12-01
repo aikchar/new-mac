@@ -1,4 +1,3 @@
-dep                            @0.5.0          devel/dep
 direnv                         @2.17.0         devel/direnv
 drill                          @1.7.0          net/ldns
 git                            @2.19.1         devel/git
@@ -13,14 +12,9 @@ pwgen                          @2.08           sysutils/pwgen
 py27-pip                       @18.1           python/py-pip
 py27-virtualenv                @16.0.0         python/py-virtualenv
 py27-wheel                     @0.32.2         python/py-wheel
-py34-pip                       @18.1           python/py-pip
-py34-virtualenv                @16.0.0         python/py-virtualenv
-py36-pip                       @18.1           python/py-pip
-py36-wheel                     @0.32.2         python/py-wheel
 py37-pip                       @18.1           python/py-pip
 pypy                           @6.0.0          lang/pypy
-python34                       @3.4.9          lang/python34
-python36                       @3.6.7          lang/python36
+python27                       @2.7.15         lang/python27
 python37                       @3.7.1          lang/python37
 qemu                           @2.12.0         emulators/qemu
 shellcheck                     @0.3.8          devel/shellcheck

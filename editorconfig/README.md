@@ -1,7 +1,15 @@
-Link editorconfig in this directory to ~/.editorconfig.
+Read *Makefile* to figure out what's going on behind the scenes.
 
-Idea is to source this file from a git repo.
+Make backups of these files,
 
-        $ ln -s ~/config/editorconfig/editorconfig ~/.editorconfig
+- ~/.editorconfig
 
-http://editorconfig.org/
+Edit these files according to your requirements,
+
+- editorconfig
+
+Then run,
+
+        $ make init
+
+More information at http://editorconfig.org/.
