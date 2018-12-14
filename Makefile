@@ -4,6 +4,7 @@ GIT_BRANCH := $(shell git branch | grep \* | cut -d ' ' -f2)
 warn:
 	@echo This is optimized for macOS and for me
 	@echo Read README.md for more information
+	@grep -o -E '^[-a-zA-Z0-9]+:' Makefile | grep -o -E '^[-a-zA-Z0-9]+'
 
 .PHONY: there-be-hackers
 there-be-hackers:
