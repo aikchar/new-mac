@@ -11,3 +11,4 @@ init:
 	python3 -m pip install --user -U pipenv
 	python3 -m pip install --user -U black
 	python3 -m pip install --user -U ansible
+	python3 -m pip install --user -U nikola
