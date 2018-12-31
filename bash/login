@@ -57,6 +57,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# set PATH so it includes poetry's bin if it exists
+if [ -d "$HOME/.poetry/bin" ] ; then
+    PATH="$HOME/.poetry/bin:$PATH"
+fi
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 SDKMAN_DIR="${HOME}/.sdkman"
 if [ -d "${SDKMAN_DIR}" ]; then
