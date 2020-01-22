@@ -1,0 +1,41 @@
+export GOPATH
+GOPATH=$HOME/go
+export PATH
+PATH="$PATH:$GOPATH/bin"
+# Assumes MacPorts is being used on macOS
+if [ "$(uname -s)" = 'Darwin' ]; then
+    export GOROOT
+    GOROOT=/opt/local/lib/go
+
+    PATH="/opt/local/bin:/opt/local/sbin:$PATH:$GOROOT/bin"
+fi
+
+if [ "$(uname -s)" = 'Darwin' ]; then
+    PATH="$PATH:$HOME/Library/Python/3.8/bin:$HOME/Library/Python/2.7/bin"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+# set PATH so it includes poetry's bin if it exists
+if [ -d "$HOME/.poetry/bin" ] ; then
+    PATH="$HOME/.poetry/bin:$PATH"
+fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+SDKMAN_DIR="${HOME}/.sdkman"
+if [ -d "${SDKMAN_DIR}" ]; then
+    export SDKMAN_DIR
+    test -s "${SDKMAN_DIR}/bin/sdkman-init.sh" && . "${SDKMAN_DIR}/bin/sdkman-init.sh"
+fi
+
+typeset -U path cdpath fpath
+setopt auto_cd
+cdpath=($HOME/repos $HOME)

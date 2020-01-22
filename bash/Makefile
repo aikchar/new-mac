@@ -14,14 +14,14 @@ warn:
 
 .PHONY: init
 init: | $(BASHDIR)
-	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress env $(BASHDIR)/env
-	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress interactive $(BASHDIR)/interactive
-	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress login $(BASHDIR)/login
-	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress logout $(BASHDIR)/logout
-	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress bash_logout ~/.bash_logout
-	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress bash_profile ~/.bash_profile
-	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress bashrc ~/.bashrc
-	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress profile ~/.profile
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --perms --one-file-system --progress env $(BASHDIR)/env
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --perms --one-file-system --progress interactive $(BASHDIR)/interactive
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --perms --one-file-system --progress login $(BASHDIR)/login
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --perms --one-file-system --progress logout $(BASHDIR)/logout
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --perms --one-file-system --progress bash_logout ~/.bash_logout
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --perms --one-file-system --progress bash_profile ~/.bash_profile
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --perms --one-file-system --progress bashrc ~/.bashrc
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --perms --one-file-system --progress profile ~/.profile
 
 $(SHELLSDIR):
 	mkdir $(SHELLSDIR)

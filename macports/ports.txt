@@ -16,3 +16,9 @@ jq
 gnupg2
 go
 shellcheck
+pandoc
+texlive-basic
+texlive-latex
+texlive-latex-extra
+texlive-latex-recommended
+texlive-fonts-recommended

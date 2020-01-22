@@ -14,3 +14,6 @@ Generate a list of requested ports,
         $ port list requested 2>/dev/null > requested
 
 You should generate this list periodically.
+
+- https://trac.macports.org/ticket/48971
+- https://pandoc.org/MANUAL.html#creating-a-pdf
