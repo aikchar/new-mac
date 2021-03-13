@@ -1,8 +1,8 @@
 # List all ports you want to install in the order they should be installed
 # The order is important so that MacPorts can keep track of which ports
 # were 'requested' to later use in ``port list requested``
-python38
-py38-pip
+python39
+py39-pip
 python27
 py27-pip
 git
@@ -12,6 +12,7 @@ tree
 drill
 sshpass
 terraform-0.12
+terraform-0.13
 jq
 gnupg2
 go
@@ -22,3 +23,9 @@ texlive-latex
 texlive-latex-extra
 texlive-latex-recommended
 texlive-fonts-recommended
+kubectl-1.14
+kubectl-1.16
+nmap
+packer
+pwgen
+py38-awscli

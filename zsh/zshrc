@@ -107,6 +107,7 @@ if [ "$(uname -s)" = 'Darwin' ]; then
     alias rbt-new='rbt post --branch master --parent master --open'
     alias rbt-update='rbt post --update --parent master --open'
     alias git-sanity='git --no-pager log --oneline --graph --decorate -10'
+    alias pull='time git pull --ff-only'
 fi
 
 
@@ -117,3 +118,23 @@ if which direnv 1>/dev/null; then
 fi
 
 PAGER='more -R'
+
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
+
+# Assumes MacPorts is being used on macOS
+if [ "$(uname -s)" = 'Darwin' ]; then
+    export GOROOT
+    GOROOT=/opt/local/lib/go
+
+    PATH="/opt/local/bin:/opt/local/sbin:$PATH:$GOROOT/bin"
+fi
+
+PATH="$PATH:$HOME/.krew/bin"
+
+setopt HIST_IGNORE_SPACE
+setopt histignorespace

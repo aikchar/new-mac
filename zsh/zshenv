@@ -11,7 +11,7 @@ if [ "$(uname -s)" = 'Darwin' ]; then
 fi
 
 if [ "$(uname -s)" = 'Darwin' ]; then
-    PATH="$PATH:$HOME/Library/Python/3.8/bin:$HOME/Library/Python/2.7/bin"
+    PATH="$PATH:$HOME/Library/Python/3.9/bin:$HOME/Library/Python/3.8/bin:$HOME/Library/Python/2.7/bin"
 fi
 
 # set PATH so it includes user's private bin if it exists
@@ -24,11 +24,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# set PATH so it includes poetry's bin if it exists
-if [ -d "$HOME/.poetry/bin" ] ; then
-    PATH="$HOME/.poetry/bin:$PATH"
-fi
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 SDKMAN_DIR="${HOME}/.sdkman"
 if [ -d "${SDKMAN_DIR}" ]; then
@@ -39,3 +34,6 @@ fi
 typeset -U path cdpath fpath
 setopt auto_cd
 cdpath=($HOME/repos $HOME)
+
+setopt HIST_IGNORE_SPACE
+setopt histignorespace
