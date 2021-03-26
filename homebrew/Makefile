@@ -16,3 +16,5 @@ install-ports:
 	brew install direnv
 	brew install tfenv
 	brew install rbtools
+	brew install jq
+	brew install yq
