@@ -106,9 +106,22 @@ if [ "$(uname -s)" = 'Darwin' ]; then
     alias port-clean='sudo /opt/local/bin/port uninstall inactive; /opt/local/bin/port echo leaves; sudo /opt/local/bin/port uninstall leaves;'
     alias rbt-new='rbt post --branch master --parent master --open'
     alias rbt-update='rbt post --update --parent master --open'
-    alias git-sanity='git --no-pager log --oneline --graph --decorate -10'
 fi
 
+# https://stackoverflow.com/a/63819504
+if [ -s /usr/bin/git ] || [ -s /usr/local/bin/git ]; then
+    alias gadd='git add -u'
+    alias gmod='git status -s | grep '"'"'^\W\w.'"'"
+    alias gpull='time git pull --ff-only'
+    # restore all staged
+    alias grst='git status -s | grep '"'"'^\w\W'"'"' | awk '"'"'{print $2}'"'"' | xargs -n1 git restore --staged'
+    alias gsanity='git --no-pager log --oneline --graph --decorate -10'
+    alias gst='git status -s'
+    # show staged files
+    alias gstg='git status -s | grep '"'"'^\w.'"'"
+    # show untracked files
+    alias gunt='git status -s | grep '"'"'^??.'"'"
+fi
 
 # Install direnv (https://github.com/direnv/direnv)
 # Enable it
@@ -117,3 +130,10 @@ if which direnv 1>/dev/null; then
 fi
 
 PAGER='more -R'
+
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
