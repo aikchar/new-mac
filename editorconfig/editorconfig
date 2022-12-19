@@ -1,3 +1,4 @@
+# https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties
 # top-most EditorConfig file
 root = true
 
@@ -5,11 +6,11 @@ root = true
 [*]
 charset = utf-8
 end_of_line = lf
-max_line_length = 119
-trim_trailing_whitespace = true
+indent_size = 4
 indent_style = space
 insert_final_newline = true
-indent_size = 4
+max_line_length = 119
+trim_trailing_whitespace = true
 
 [*.go]
 indent_style = tab
@@ -30,12 +31,11 @@ insert_final_newline = false
 max_line_length = 119
 
 [Vagrantfile]
-indent_style = space
 indent_size = 4
+indent_style = space
 
-[{Makefile,gitconfig,.gitconfig}]
+[{Makefile,Makefile.*,gitconfig,.gitconfig}]
 indent_style = tab
 
 [*.properties]
-; end_of_line = crlf
 end_of_line = lf
