@@ -106,11 +106,16 @@ if [ "$(uname -s)" = 'Darwin' ]; then
     alias port-clean='sudo /opt/local/bin/port uninstall inactive; /opt/local/bin/port echo leaves; sudo /opt/local/bin/port uninstall leaves;'
     alias rbt-new='rbt post --branch master --parent master --open'
     alias rbt-update='rbt post --update --parent master --open'
+    alias brewup='brew upgrade'
+    alias brewin='brew install'
 fi
 
 # https://stackoverflow.com/a/63819504
 if [ -s /usr/bin/git ] || [ -s /usr/local/bin/git ]; then
     alias gadd='git add -u'
+    alias gbd='git branch -d'
+    alias gco='git checkout'
+    alias gcob='git checkout -b'
     alias gmod='git status -s | grep '"'"'^\W\w.'"'"
     alias gpull='time git pull --ff-only'
     # restore all staged
