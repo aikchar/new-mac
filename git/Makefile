@@ -9,6 +9,12 @@ warn:
 	@echo 'Then run'
 	@echo '    make init'
 
+.PHONY: backup
+backup:
+	cp ~/.git-prompt.sh ~/.git-prompt.sh.bak.$(NOW)
+	cp ~/.gitconfig ~/.gitconfig.bak.$(NOW)
+	cp ~/.gitmessage ~/.gitmessage.bak.$(NOW)
+
 .PHONY: init
 init:
 	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress git-prompt.sh ~/.git-prompt.sh

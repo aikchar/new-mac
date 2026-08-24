@@ -1,0 +1,30 @@
+{
+    "name": "exampledevc",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "forwardPorts": [
+        1313
+    ],
+    "containerEnv": {
+        "CLAUDE_CONFIG_DIR": "/home/aikchar/.claude",
+        "CLAUDE_CODE_OAUTH_TOKEN": "put_TOKEN_here"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "DavidAnson.vscode-markdownlint",
+                "hediet.vscode-drawio",
+                "yzhang.markdown-all-in-one"
+            ]
+        }
+    },
+    "mounts": [
+        "source=${localEnv:HOME}/.agent,target=/home/aikchar/.agents,type=bind,consistency=cached",
+        "source=${localEnv:HOME}/.claude,target=/home/aikchar/.claude,type=bind,consistency=cached"
+    ],
+    "remoteUser": "aikchar",
+    "remoteEnv": {
+        "PODMAN_USERNS": "keep-id"
+    }
+}

@@ -8,13 +8,13 @@ warn:
 
 .PHONY: there-be-hackers
 there-be-hackers:
-	cd macports && make install-ports
-	cd git && make init
-	cd bash && make init
+	cd homebrew && make install-homebrew
+	cd homebrew && make install-packages
+	cd git && make backup init
+	cd zsh && make init
 	cd editorconfig && make init
 	cd vscode && make init
 	cd vim && make init
-	cd dev && make init
 
 .PHONY: git-push
 git-push:
