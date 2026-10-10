@@ -9,5 +9,5 @@ warn:
 
 .PHONY: init
 init:
-	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress user_settings.json '/Users/hamza/Library/Application Support/Code/User/settings.json'
+	rsync --verbose --checksum --backup --suffix=-$(NOW) --inplace --perms --one-file-system --progress user_settings.json '/Users/aikchar/Library/Application Support/Code/User/settings.json'
 	for f in $$(sort -f extensions); do code --install-extension "$${f}"; done

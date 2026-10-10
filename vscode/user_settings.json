@@ -6,20 +6,20 @@
     "editor.cursorStyle": "line",
     // https://github.com/adobe-fonts/source-code-pro
     // https://www.jetbrains.com/lp/mono/
-    "editor.fontFamily": "Source Code Pro, JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontLigatures": false,
-    "editor.fontSize": 16,
+    "editor.fontFamily": "Source Code Pro, SF Mono, JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "editor.fontWeight": 400,
     "editor.guides.indentation": true,
     "editor.insertSpaces": true,
     "editor.minimap.enabled": true,
     "editor.minimap.showSlider": "always",
     "editor.renderControlCharacters": true,
-    "editor.renderIndentGuides": true,
     "editor.renderWhitespace": "all",
-    "editor.rulers": [79, 119],
+    "editor.rulers": [80, 120],
     "editor.tabSize": 4,
     "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 119,
+    "editor.wordWrapColumn": 120,
     "editor.wrappingIndent": "indent",
     "extensions.autoCheckUpdates": true,
     "files.associations": {
@@ -44,10 +44,7 @@
     "files.trimTrailingWhitespace": true,
     "git.enabled": true,
     "go.formatTool": "gofmt", // https://github.com/Microsoft/vscode-go/issues/624#issuecomment-261696096
-    "python.formatting.provider": "black",
-    "python.linting.lintOnSave": true,
-    "python.linting.pylintEnabled": true,
-    "shellcheck.enable": true,
+    "redhat.telemetry.enabled": false,
     "telemetry.telemetryLevel": "off",
     "terminal.external.osxExec": "iTerm.app",
     "window.zoomLevel": 0,
@@ -64,7 +61,7 @@
         }
     },
     "[shellscript]": {
-        "editor.rulers": [119],
+        "editor.rulers": [120],
         "editor.wordWrap": "off"
     },
     "[go]": {
@@ -72,20 +69,20 @@
         "editor.wordWrap": "off"
     },
     "[java]": {
-        "editor.rulers": [79, 119],
+        "editor.rulers": [80, 120],
         "editor.wordWrap": "off"
     },
     "[terraform]": {
         "editor.formatOnSave": true,
-        "editor.rulers": [119]
+        "editor.rulers": [120]
     },
     "[json]": {
-        "editor.rulers": [119],
+        "editor.rulers": [120],
         "editor.tabSize": 4,
         "editor.wordWrap": "off"
     },
     "[yaml]": {
-        "editor.rulers": [119],
+        "editor.rulers": [120],
         "editor.tabSize": 4,
         "editor.wordWrap": "off"
     }

@@ -1,5 +1,7 @@
 if [ "$(uname -s)" = 'Darwin' ]; then
-    PATH="$PATH:$HOME/Library/Python/3.10/bin:$HOME/Library/Python/3.9/bin:$HOME/Library/Python/3.8/bin:$HOME/Library/Python/2.7/bin"
+    if [ -d '/opt/homebrew/bin' ]; then
+        PATH="/opt/homebrew/bin:$PATH"
+    fi
 fi
 
 # set PATH so it includes user's private bin if it exists
@@ -12,16 +14,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-SDKMAN_DIR="${HOME}/.sdkman"
-if [ -d "${SDKMAN_DIR}" ]; then
-    export SDKMAN_DIR
-    test -s "${SDKMAN_DIR}/bin/sdkman-init.sh" && . "${SDKMAN_DIR}/bin/sdkman-init.sh"
-fi
-
 typeset -U path cdpath fpath
 setopt auto_cd
 cdpath=($HOME/repos $HOME)
-
-setopt HIST_IGNORE_SPACE
-setopt histignorespace
